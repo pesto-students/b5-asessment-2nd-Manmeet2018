@@ -13,9 +13,11 @@ function balancedBraces(...args) {
       stack.push(element);
     }
     else if(isCloseBrace(element)) {
-      if(stack.length == 0) return false;
+      if(stack.length == 0)
+        return false;
       const open = stack.pop();
-      if(!isBalanced(open,element)) return false;
+      if(!isBalanced(open,element))
+        return false;
     }
   }
   return (stack.length == 0);
